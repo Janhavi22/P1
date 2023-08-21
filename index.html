@@ -10,28 +10,37 @@
            font-family: cap;
            src: url(./Heading-Now-Variable.ttf);
            }
+           @font-face {
+            font-family: syn;
+           src: url(./Syncopate-Regular.ttf);
+           }
            #page1 h1{
             font-stretch: 250%;
+            
            }
+          
     </style>
 </head>
 <body>
     <div id="main" class="h-screen w-full ">
-        <nav id="navbar" class="bg-black">
-            <p class="text-white font-[] text-7xl">MOQO</p>
-            <ul>
-                <li>WORK</li>
-                <li>CONTACT</li>
-                <li>MENU</li>
-            </ul>
-        </nav>
+       <div id="loader" class="h-full w-full bg-black fixed z-[99] flex items-center justify-center"><h1 class="font-[cap] text-9xl text-white ">0%</h1></div>
         <div id="page1" class="h-full w-full bg-black overflow-hidden">
-            <h1 class="text-[40vw] text-white font-[cap]  whitespace-nowrap tracking-wide font-[999]">WE BUILD BRANDS</h1>
+            <nav id="navbar" class="bg-black flex justify-between">
+                <p class="text-white font-thin text-7xl p-8 font-[syn]">MOQO</p>
+                <div>
+                    <ul class="flex text-white ">
+                        <li class="list-none px-7 font-[syn] mt-16 text-3xl cursor-pointer hover:tracking-wider">WORK</li>
+                        <li class="list-none px-7 font-[syn] mt-16 text-3xl cursor-pointer hover:tracking-wider">CONTACT</li>
+                        <li class="list-none px-7 font-[syn] mt-16 text-3xl cursor-pointer hover:tracking-wider">MENU</li>
+
+                </div>
+            </nav>
+            <h1 class="text-[40vw] text-white font-[cap] whitespace-nowrap tracking-wide font-[999]">WE BUILD BRANDS</h1>
         </div>
-        <div id="page2" class="h-full w-full bg-black"></div>
+        <div id="page2" class="h-full w-full bg-pink-300"></div>
         <div id="page3" class="h-full w-full bg-black"></div>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
