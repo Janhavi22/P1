@@ -41,22 +41,43 @@ gsap.to("#page1 h1",{
 //      el: document.querySelector('#main'),
 //      smooth: true
 // });
-// var tl = gsap.timeline()
-// tl.from("#page2",{
-//     width:300,
-
-//     scrollTrigger:{
-//         trigger:"#page2",
-//         scroller:"body",
-//         start:"50% ",
-//     }
+var ts = gsap.timeline()
+ts.from("#page1",{
+    y:"100vh",
+   scale:0.6,
+   duration:2,
+   scrollTrigger:{
+    trigger:"#page2",
+    scroller:"body",
+     markers:true,
+    start:"top 0",
+    end:"",
+    scrub:2,
+    pin:true
+}
+})
+ts.to("#page2",{
+    
+    duration:4,
+    delay:1
+})
+// ts.to("#page2",{
+//     y:"00vh",
+//     rotate:360,
+//     scale:1,
+//     duration:0.8
 // })
-// tl.to("#page2",{
+// tl.to("#page1",{
+//     y:"100vh",
+//     scale:0.6,
+//     duration:0
+// })
+// tl.to("#page1",{
 //     y:"30vh",
 //     duration:1,
 //     delay:1
 // })
-// tl.to("#page2",{
+// tl.to("#page1",{
 //     y:"00vh",
 //     rotate:360,
 //     scale:1,
