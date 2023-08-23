@@ -42,25 +42,24 @@ gsap.to("#page1 h1",{
 //      smooth: true
 // });
 var ts = gsap.timeline()
-ts.from("#page1",{
-    y:"100vh",
-   scale:0.6,
+ts.from("#video",{
+   y:"100vh",
+  scale:0.6,
    duration:2,
    scrollTrigger:{
-    trigger:"#page2",
+    trigger:"#video",
     scroller:"body",
      markers:true,
-    start:"top 0",
-    end:"",
+    start:"top 80%",
     scrub:2,
-    pin:true
+    // pin:true
 }
 })
-ts.to("#page2",{
+// ts.to("#page2",{
     
-    duration:4,
-    delay:1
-})
+//     duration:4,
+//     delay:1
+// })
 // ts.to("#page2",{
 //     y:"00vh",
 //     rotate:360,

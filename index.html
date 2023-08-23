@@ -25,7 +25,7 @@
 <body>
     <div id="main" class="h-screen w-full ">
        <!-- <div id="loader" class="h-full w-full bg-black fixed z-[99] flex items-center justify-center"><h1 class="font-[cap] text-9xl text-white ">0%</h1></div> -->
-        <div id="page1" class="h-full w-full bg-black overflow-hidden">
+        <div id="page1" class="h-full w-full bg-black ">
             <nav id="navbar" class="bg-black flex justify-between">
                 <p class="text-white font-thin text-7xl p-8 font-[syn]">MOQO</p>
                 <div>
@@ -38,16 +38,17 @@
             </nav>
             <h1 class="text-[40vw] text-white font-[cap] whitespace-nowrap tracking-wide font-[999]">WE BUILD BRANDS</h1>
         </div>
-        <div id="page2" class="h-full w-full ">
-            <section class="max-md:h-[150vh] h-[251vh] z-[1] w-full not-visible video-container relative" data-mobile="https://moqo.be/uploads/files/MOQO-branding-agency-showreel-mobile.mp4">
+       
+        <div id="page2" class="h-full w-full bg-black">
+            <div class="max-md:h-[150vh] h-[251vh] z-[1] w-full not-visible video-container relative" data-mobile="https://moqo.be/uploads/files/MOQO-branding-agency-showreel-mobile.mp4">
                 <div class="sticky top-0 h-screen overflow-hidden image-container video-mask" style="clip-path: inset(-6.72406%);">
                     <div class="js-video relative w-full h-screen  ">
-                        <video width="320" height="240" class="w-screen h-[56.25vw] min-h-screen min-w-[177.77vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 !pointer-events-none absolute" autoplay="" loop="" muted="" playsinline="">
+                        <video id="video" width="320" height="240" class="w-screen h-[56.25vw] min-h-screen min-w-[177.77vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 !pointer-events-none absolute" autoplay="" loop="" muted="" playsinline="">
                          <source src="https://moqo.be/uploads/files/MOQO-branding-agency-showreel.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
         <div id="page3" class="h-full w-full bg-black"></div>
     </div>
