@@ -43,14 +43,14 @@ gsap.to("#page1 h1",{
 // });
 var ts = gsap.timeline()
 ts.from("#video",{
-   y:"100vh",
+  transform:"translate-y-2/4",
   scale:0.6,
    duration:2,
    scrollTrigger:{
     trigger:"#video",
     scroller:"body",
      markers:true,
-    start:"top 80%",
+    start:"top 90%",
     scrub:2,
     // pin:true
 }
