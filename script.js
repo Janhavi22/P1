@@ -49,7 +49,7 @@ ts.from("#video",{
    scrollTrigger:{
     trigger:"#video",
     scroller:"body",
-     markers:true,
+    //  markers:true,
     start:"top 90%",
     scrub:2,
     // pin:true
