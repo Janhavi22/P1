@@ -24,6 +24,13 @@ tl.to("#loader",{
     duration:1.5
 })
 
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
 gsap.to("#page1 h1",{
     transform:"translateX(-100%)",
     fontWeight:"100",

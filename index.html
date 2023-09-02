@@ -19,12 +19,63 @@
             font-stretch: 250%;
             
            }
+           .overlay {
+             height: 0%;
+             width: 100%;
+             position: fixed;
+             z-index: 1;
+             top: 0;
+             left: 0;
+             background-color: tomato;
+            
+             overflow-y: hidden;
+             transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 5%;
+  width: 100%;
+  margin-left: 300px;
+  text-align: left;
+  
+}
+
+.overlay a {
+ 
+  text-decoration: none;
+  font-size: 60px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: black;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  /* font-size: 40px; */
+  top: 15px;
+  right: 35px;
+  }
+}
           
     </style>
 </head>
 <body>
-    <div id="main" class=" w-full ">
-        <div id="loader" class="h-full w-full bg-black fixed z-[99] flex items-center justify-center"><h1 class="font-[cap] text-9xl text-white ">0%</h1></div>
+    <div id="main" class=" w-full bg-black">
+        <!-- <div id="loader" class="h-full w-full bg-black fixed z-[99] flex items-center justify-center"><h1 class="font-[cap] text-9xl text-white ">0%</h1></div> -->
         <div id="page1" class="h-full w-full bg-black ">
             <nav id="navbar" class="bg-black flex justify-between">
                 <p class="text-white font-thin text-7xl p-8 font-[syn]">MOQO</p>
@@ -32,13 +83,28 @@
                     <ul class="flex text-white ">
                         <li class="list-none px-7 font-[syn] mt-16 text-3xl cursor-pointer hover:tracking-widest">WORK</li>
                         <li class="list-none px-7 font-[syn] mt-16 text-3xl cursor-pointer hover:tracking-widest">CONTACT</li>
-                        <li class="list-none px-7 font-[syn] mt-16 text-3xl cursor-pointer hover:tracking-widest">MENU</li>
+                        <li class="list-none px-7 font-[syn] mt-16 text-3xl cursor-pointer hover:tracking-widest" onclick="openNav()">MENU</li>
+                        <div id="myNav" class="overlay">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <div class="overlay-content">
+                              <a href="#" class="cursor-pointer hover:font-[100] font-[999] text-[30vw] mt-6">WORK</a>
+                              <a href="#" class="cursor-pointer hover:font-[100] font-[999] text-[30vw] mt-6">ABOUT</a>
+                              <a href="#" class="cursor-pointer hover:font-[100] font-[999] text-[30vw] mt-6">WHAT WE DO</a>
+                              <a href="#" class="cursor-pointer hover:font-[100] font-[999] text-[30vw] mt-6">INSIGHTS</a>
+                              <a href="#" class="cursor-pointer hover:font-[100] font-[999] text-[30vw] mt-6">JOBS</a>
+                              <a href="#" class="cursor-pointer hover:font-[100] font-[999] text-[30vw] mt-6">CLIENTS</a>
+                              <a href="#" class="cursor-pointer hover:font-[100] font-[999] text-[30vw] mt-6">CONTACT</a>
+                            </div>
+                        </div>                   
+                    </ul>     
+                          
+                          
                 </div>
             </nav>
             <h1 class="text-[40vw] text-white font-[cap] whitespace-nowrap tracking-wide font-[999]">WE BUILD BRANDS</h1>
         </div>
        
-        <div id="page2" class="h-full w-full bg-black">
+        <div id="page2" class="h-full w-full bg-black ">
             <div class="max-md:h-[150vh] h-[251vh] z-[1] w-full not-visible video-container relative" data-mobile="https://moqo.be/uploads/files/MOQO-branding-agency-showreel-mobile.mp4">
                 <div class="sticky top-0 h-screen overflow-hidden image-container video-mask" style="clip-path: inset(-6.72406%);">
                     <div class="js-video relative w-full h-screen  ">
@@ -52,7 +118,15 @@
         </div>
         
         <div id="page3" class="h-full w-full bg-black">
-            <div id="heading"></div>
+            <div id="heading" class="bg-white h-full w-full flex">
+                <h1 class="text-black font-thin text-7xl p-8 items-start font-[syn]">LET’S TURN <br> YOUR <br> STORY</h1>
+                <h2 class="text-black font-thin text-2xl p-8 font-[syn]">WELL THOUGHT-OUT. <br> COVERING YOUR BUSINESS STRATEGY. <br> RESPONSIVE TO TIME AND TRENDS.</h2>
+                
+                <div class="relative flex items-center justify-center h-full overflow-hidden image-container object"><picture class="block image-base tile-to-fullscreen top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none !absolute w-full h-full max-md:h-[70vw] relative overflow-hidden">
+                    <source type="image/webp" data-srcset="https://moqo.be/uploads/files/transforms/Work/_2500x1500_crop_center-center_85_none/78689/MOQO_KLANT_1920x1152_2023-08-25-101453_sdsl.webp" media="2500w" srcset="https://moqo.be/uploads/files/transforms/Work/_2500x1500_crop_center-center_85_none/78689/MOQO_KLANT_1920x1152_2023-08-25-101453_sdsl.webp">
+                    <img data-src="https://moqo.be/uploads/files/transforms/Work/_3840x2304_crop_center-center_85_none/78689/MOQO_KLANT_1920x1152_2023-08-25-101453_sdsl.webp" data-srcset="https://moqo.be/uploads/files/transforms/Work/_2500x1500_crop_center-center_85_none/78689/MOQO_KLANT_1920x1152_2023-08-25-101453_sdsl.webp 2500w" width="3840" height="2304" alt="MOQO KLANT 1920x1152" class="w-full object-cover object-centerh-[42vw] lazy-placeholder w-full h-full object-cover lazyloaded" style="object-position: 50% 50%" loading="lazy" srcset="https://moqo.be/uploads/files/transforms/Work/_2500x1500_crop_center-center_85_none/78689/MOQO_KLANT_1920x1152_2023-08-25-101453_sdsl.webp 2500w" src="https://moqo.be/uploads/files/transforms/Work/_3840x2304_crop_center-center_85_none/78689/MOQO_KLANT_1920x1152_2023-08-25-101453_sdsl.webp"><div class="lazy-overlay"></div>
+                    </picture></div>
+            </div>
         </div>
     </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
