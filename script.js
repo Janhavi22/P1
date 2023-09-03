@@ -1,5 +1,5 @@
+// ---------------------loader---------------------
 var tl = gsap.timeline()
-
 function time(){
     var a=0
     setInterval(function(){
@@ -23,7 +23,7 @@ tl.to("#loader",{
     delay:0.4,
     duration:1.5
 })
-
+// --------------------------menu----------------------------
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
   }
@@ -31,6 +31,7 @@ function openNav() {
   function closeNav() {
     document.getElementById("myNav").style.height = "0%";
   }
+// -------------------------heading----------------------------  
 gsap.to("#page1 h1",{
     transform:"translateX(-100%)",
     fontWeight:"100",
@@ -48,6 +49,7 @@ gsap.to("#page1 h1",{
 //      el: document.querySelector('#main'),
 //      smooth: true
 // });
+// ------------------------video--------------------------
 var ts = gsap.timeline()
 ts.from("#video",{
   transform:"translate-y-2/4",
@@ -62,30 +64,19 @@ ts.from("#video",{
     // pin:true
 }
 })
-// ts.to("#page2",{
+// ---------------------------title----------------------
+
+var t2=gsap.timeline()
+t2.to("title",{
+   y : -100,
     
-//     duration:4,
-//     delay:1
-// })
-// ts.to("#page2",{
-//     y:"00vh",
-//     rotate:360,
-//     scale:1,
-//     duration:0.8
-// })
-// tl.to("#page1",{
-//     y:"100vh",
-//     scale:0.6,
-//     duration:0
-// })
-// tl.to("#page1",{
-//     y:"30vh",
-//     duration:1,
-//     delay:1
-// })
-// tl.to("#page1",{
-//     y:"00vh",
-//     rotate:360,
-//     scale:1,
-//     duration:0.8
-// })
+    scrollTrigger:{
+        trigger:"#title",
+        scroller:"body",
+        markers:true,
+        start:"top 80%",
+        end:"bottom 20%",
+        scrub:2,
+        // pin:true
+    }
+})
