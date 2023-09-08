@@ -13,7 +13,7 @@ function time(){
         
     },150)
 }
-tl.to("#loader h1",{
+tl.to("#loader h1" ,{
     delay:0.5,
     duration:1,
     onStart:time()
