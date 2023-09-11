@@ -66,18 +66,19 @@ ts.from("#video",{
 })
 // ---------------------------title----------------------
 
-var t2=gsap.timeline()
-t2.to("title",{
-   y : -100,
+// var t2=gsap.timeline()
+// t2.from("title",{
+//    y : -100,
     
-    scrollTrigger:{
-        trigger:"#title",
-        scroller:"body",
-        markers:true,
-        start:"top 80%",
-        end:"bottom 20%",
-        scrub:2,
-        // pin:true
-    }
-})
+//     scrollTrigger:{
+//         trigger:"#title",
+//         scroller:"body",
+//         markers:true,
+//         start:"bottom bottom",
+//         end:"top top",
+//         scrub:2,
+//         pin:true
+//     }
+// })
+
 // -------------------MouseEvent----------------
