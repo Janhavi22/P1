@@ -82,3 +82,18 @@ ts.from("#video",{
 // })
 
 // -------------------MouseEvent----------------
+window.addEventListener("mousemove", function (details){
+    var cir = document.querySelector("#cir");
+    var xval = gsap.utils.mapRange(
+        0,
+        window.innerWidth,
+        200 + cir.getBoundingClientRect().width / 2,
+        window.innerWidth - (200 + cir.getBoundingClientRect().width / 2),
+        details.clientX,
+    );
+    gsap.to("#cir",{
+        left: xval,
+        ease: Power3,
+        
+    });
+});
