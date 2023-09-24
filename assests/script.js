@@ -45,11 +45,7 @@ gsap.to("#page1 h1",{
         pin:true
     }
 })
-//  const scroll = new LocomotiveScroll({
-//      el: document.querySelector('#main'),
-//      smooth: true
-// });
-// ------------------------video--------------------------
+
 var ts = gsap.timeline()
 ts.from("#video",{
   transform:"translate-y-2/4",
@@ -58,7 +54,7 @@ ts.from("#video",{
    scrollTrigger:{
     trigger:"#video",
     scroller:"body",
-    //  markers:true,
+    
     start:"top 90%",
     scrub:2,
     // pin:true
