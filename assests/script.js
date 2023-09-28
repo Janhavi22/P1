@@ -56,8 +56,7 @@ ts.from("#video",{
     scroller:"body",
     
     start:"top 90%",
-    scrub:2,
-
+    scrub:2
 }
 })
 // ---------------------------title----------------------
