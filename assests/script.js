@@ -64,7 +64,6 @@ ts.from("#video",{
 // var t2=gsap.timeline()
 // t2.from("title",{
 //    y : -100,
-    
 //     scrollTrigger:{
 //         trigger:"#title",
 //         scroller:"body",
