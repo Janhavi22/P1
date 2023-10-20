@@ -91,6 +91,7 @@ window.addEventListener("mousemove", function (details){
         
     });
 });
+
 // function text(a){
 //     a.style.bgColor="black",
 //     a.style.color="white"
